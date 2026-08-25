@@ -1,0 +1,7 @@
+'use client';
+
+import { resetProgress } from '@/lib/progress';
+import { useState } from 'react';
+import { Notice } from './ui';
+
+export function SettingsPanel(){const[confirmed,setConfirmed]=useState(false);function reset(){resetProgress();setConfirmed(true)}return <div className="grid gap-5 lg:grid-cols-2"><section className="rounded-3xl bg-white p-6 ring-1 ring-[#dcebed]"><h2 className="text-xl font-black text-[#0E2A55]">Dados neste dispositivo</h2><p className="mt-3 leading-7 text-[#607488]">Guardamos apenas contagens de sessões, exercícios, temas e pistas. Não guardamos conversas, frases ou imagens.</p><button type="button" onClick={reset} className="mt-5 rounded-2xl border-2 border-[#b84f45] px-5 py-3 font-extrabold text-[#963e36] focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-[#18B9B7]">Apagar o meu progresso</button>{confirmed&&<div className="mt-4"><Notice tone="success">O progresso local foi apagado.</Notice></div>}</section><section className="rounded-3xl bg-white p-6 ring-1 ring-[#dcebed]"><h2 className="text-xl font-black text-[#0E2A55]">Experiência acessível</h2><p className="mt-3 leading-7 text-[#607488]">O EduIA respeita as preferências do dispositivo, incluindo movimento reduzido. Podes navegar com teclado e os controlos têm foco visível.</p><p className="mt-5 rounded-2xl bg-[#f2f9fa] p-4 text-sm font-semibold leading-6 text-[#3e586d]">Idioma da V0: Português de Portugal</p></section></div>}

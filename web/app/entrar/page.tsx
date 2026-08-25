@@ -1,0 +1,6 @@
+import Link from 'next/link';
+import Image from 'next/image';
+
+export default function EnterPage() {
+  return <main className="grid min-h-screen place-items-center bg-[#F7FBFC] p-5"><section className="w-full max-w-xl rounded-[36px] bg-white p-7 text-center shadow-[0_28px_80px_rgba(14,42,85,.12)] ring-1 ring-[#dcebed] sm:p-10"><Image src="/eduia-logo.svg" alt="EduIA" width={420} height={120} className="mx-auto h-auto w-48" priority /><div className="mx-auto mt-8 grid size-20 place-items-center rounded-3xl bg-[#e5f8f8] text-3xl" aria-hidden="true">✦</div><h1 className="mt-6 text-3xl font-black text-[#0E2A55]">Pronto para aprender?</h1><p className="mx-auto mt-3 max-w-md leading-7 text-[#576d81]">Vais entrar num perfil de teste. Não precisas de indicar o teu nome, escola ou qualquer contacto.</p><Link href="/inicio" className="mt-8 inline-flex min-h-12 items-center rounded-2xl bg-[#0E2A55] px-7 py-4 font-extrabold text-white focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-[#18B9B7]">Entrar no modo de teste <span className="ml-2" aria-hidden="true">→</span></Link><p className="mt-6 text-xs leading-5 text-[#718396]">As conversas e imagens não ficam guardadas. O progresso fica apenas neste dispositivo.</p></section></main>;
+}

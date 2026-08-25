@@ -1,0 +1,3 @@
+import { ActionCard, PageHeader } from '@/components/ui';
+
+export default function DoubtsPage() { return <><PageHeader eyebrow="Tutor socrático" title="Como queres começar?" description="Escolhe a situação que melhor descreve o que precisas agora." /><div className="grid gap-5 md:grid-cols-3"><ActionCard href="/duvidas/tutor?context=doubt" title="Tenho uma dúvida" description="Faz uma pergunta e recebe a primeira pista." icon="?" /><ActionCard href="/duvidas/tutor?context=homework" title="Estou a fazer o TPC" description="Mostra o que já tentaste antes de avançar." icon="✎" /><ActionCard href="/duvidas/tutor?context=understand" title="Quero perceber uma matéria" description="Explora um conceito com perguntas simples." icon="✦" /></div></>; }

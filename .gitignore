@@ -1,0 +1,6 @@
+# macOS metadata
+.DS_Store
+
+# Keep local Site credentials and generated archives out of the monorepo.
+*.tar.gz
+*.bundle

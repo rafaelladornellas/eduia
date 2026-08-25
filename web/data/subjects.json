@@ -1,0 +1,13 @@
+[
+  { "id": "portugues", "name": "Português", "group": "Línguas" },
+  { "id": "ingles", "name": "Inglês", "group": "Línguas" },
+  { "id": "hgp", "name": "História e Geografia de Portugal", "group": "Ciências Humanas" },
+  { "id": "educacao_cidadania", "name": "Educação e Cidadania", "group": "Cidadania" },
+  { "id": "matematica", "name": "Matemática", "group": "Matemática e Ciências" },
+  { "id": "ciencias_naturais", "name": "Ciências Naturais", "group": "Matemática e Ciências" },
+  { "id": "educacao_tecnologica", "name": "Educação Tecnológica", "group": "Expressões" },
+  { "id": "educacao_visual", "name": "Educação Visual", "group": "Expressões" },
+  { "id": "educacao_musical", "name": "Educação Musical", "group": "Expressões" },
+  { "id": "tic", "name": "Tecnologias de Informação e Comunicação", "group": "Tecnologia" },
+  { "id": "educacao_fisica", "name": "Educação Física", "group": "Expressões" }
+]

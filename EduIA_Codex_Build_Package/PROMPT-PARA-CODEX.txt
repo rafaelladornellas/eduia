@@ -1,0 +1,21 @@
+Lê todos os documentos deste pacote antes de escrever qualquer código.
+
+Objetivo: construir a V0 da EduIA Web App, responsiva e em PT-PT, para crianças do 5.º ano, com foco em aprendizagem socrática e autonomia.
+
+Primeiro:
+1. resume o escopo;
+2. propõe arquitetura mínima;
+3. identifica ambiguidades;
+4. apresenta plano alinhado a TASKS.md;
+5. não escrevas código até eu aprovar.
+
+Regras:
+- não inventes funcionalidades;
+- não uses IA real no primeiro milestone;
+- usa mocks/adapters;
+- segurança infantil e privacidade são centrais;
+- mobile + desktop + acessibilidade;
+- disciplinas de data/subjects.json;
+- usa o SVG placeholder apenas para desenvolvimento.
+
+Depois da minha aprovação, implementa apenas Milestone 0 e Milestone 1.

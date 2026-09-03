@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     const parsed = schema.safeParse(await request.json());
     if (!parsed.success) return Response.json({ message: 'Escreve apenas uma palavra.' }, { status: 400 });
     const entry = await tutorProvider.defineWord(parsed.data);
-    if (!entry) return Response.json({ message: 'Ainda não temos essa palavra na demonstração. Experimenta “autonomia”, “compreender” ou “explorar”.' }, { status: 404 });
+    if (!entry) return Response.json({ message: 'Ainda não temos essa palavra no dicionário. Confirma a ortografia ou experimenta outra palavra.' }, { status: 404 });
     return Response.json(entry);
   } catch {
     return Response.json({ message: 'O dicionário está indisponível agora. Tenta novamente.' }, { status: 503 });

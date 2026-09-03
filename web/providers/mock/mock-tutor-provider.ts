@@ -1,12 +1,10 @@
+import { ptPTDictionaryEntries } from '@/data/dictionary/pt-PT';
+import { createDictionary, findDictionaryEntry } from '@/domain/dictionary';
 import { nextTutorResponse } from '@/domain/tutor';
-import type { DictionaryEntry, StudyCard, TutorInput } from '@/domain/types';
+import type { StudyCard, TutorInput } from '@/domain/types';
 import type { TutorProvider } from '../tutor-provider';
 
-const dictionary: Record<string, DictionaryEntry> = {
-  autonomia: { word: 'autonomia', meaning: 'Capacidade de fazer escolhas e realizar tarefas por ti, com responsabilidade.', example: 'A Leonor mostrou autonomia ao organizar o seu estudo.', synonym: 'independência', antonym: 'dependência' },
-  compreender: { word: 'compreender', meaning: 'Perceber o significado ou a razão de alguma coisa.', example: 'O Rui fez uma pergunta para compreender o problema.', synonym: 'entender' },
-  explorar: { word: 'explorar', meaning: 'Observar ou investigar algo para aprender mais.', example: 'Vamos explorar uma nova ideia em Ciências.', synonym: 'investigar' },
-};
+const dictionary = createDictionary(ptPTDictionaryEntries);
 
 export class MockTutorProvider implements TutorProvider {
   async sendMessage(input: TutorInput) { return nextTutorResponse(input); }
@@ -30,5 +28,5 @@ export class MockTutorProvider implements TutorProvider {
     });
   }
 
-  async defineWord({ word }: { word: string }) { return dictionary[word.trim().toLocaleLowerCase('pt-PT')] ?? null; }
+  async defineWord({ word }: { word: string }) { return findDictionaryEntry(dictionary, word); }
 }

@@ -31,6 +31,7 @@ npm run build
 
 - A UI nunca chama diretamente um fornecedor de IA.
 - O provider mock implementa tutor, dicionário, cartões e revisão.
+- O dicionário usa um catálogo local e curado em português europeu, definido em `data/dictionary/pt-PT.ts`, sem APIs externas.
 - As disciplinas vêm exclusivamente de `data/subjects.json`.
 - Os temas são placeholders e não representam currículo oficial.
 - Conversas, respostas livres e imagens permanecem apenas na sessão.
